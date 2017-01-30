@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'http://localhost/test.js';
+        document.body.appendChild(scriptElement);
+        scriptElement.addEventListener('load',function(){
+            console.log(data);
+        });
+    </script>
+</body>
+</html>

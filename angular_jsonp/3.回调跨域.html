@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'http://localhost/test1.js';
+        document.body.appendChild(scriptElement);
+        window.fn = function(data){
+            console.log(data);
+        }
+        scriptElement.addEventListener('load',function(){
+            console.log('数据加载成功');
+        });
+    </script>
+</body>
+</html>

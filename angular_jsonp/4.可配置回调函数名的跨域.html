@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var scriptElement = document.createElement('script');
+        var jsonpFn = 'myfn';
+        scriptElement.src = 'http://localhost/test1.php?callback=' + jsonpFn;
+        document.body.appendChild(scriptElement);
+        window[jsonpFn] = function(data){
+            console.log(data);
+        }
+        scriptElement.addEventListener('load',function(){
+            console.log('数据加载成功');
+        });
+    </script>
+</body>
+</html>

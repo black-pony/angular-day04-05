@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script>
+        $(function(){
+            var jsonpCallbackFn = 'myceshi111';
+            window[jsonpCallbackFn] = function(json){
+                console.log(json);
+            }
+            $.ajax({
+                url:'http://localhost/test1.php',
+                dataType:'jsonp',
+                jsonpCallback:jsonpCallbackFn//显式声明回调函数的名字
+            })
+        });
+
+        // 买个手机
+        // var xhr 
+        // 拨号
+        // xhr.open    
+
+        
+
+        // 接听xhr.onadready
+
+        // 打
+        // xhr.send()
+    </script>
+</body>
+</html>

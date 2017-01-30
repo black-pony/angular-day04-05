@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style lang="">
+        .huangli .tab{
+
+        }
+    </style>
+</head>
+<body ng-app="myApp" ng-controller="myController">
+    <script src="./node_modules/angular/angular.js"></script>
+    <script>
+        // YUI.DOM.getById()
+        var myApp = angular.module('myApp',[]);
+        //把所有的外部服务器域名加入白名单
+        myApp.config(function($sceDelegateProvider){
+            $sceDelegateProvider.resourceUrlWhitelist(['**']);
+        });
+        myApp.controller('myController',function($scope,$http){
+            // console.log($http)
+            $http.jsonp("http://localhost/test1.php").then(function(res){
+                console.log(res);
+            });
+            $http.jsonp("http://localhost/test1.php").then(function(res){
+                console.log(res);
+            });
+        });
+    </script>
+</body>
+</html>
