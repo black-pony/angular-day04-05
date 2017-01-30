@@ -1,0 +1,19 @@
+{
+  "name": "angular-day04-day-5",
+  "version": "1.0.0",
+  "description": "- 凡是带link,src就可以用来跨域",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/black-pony/angular-day04-05.git"
+  },
+  "author": "ericzheng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/black-pony/angular-day04-05/issues"
+  },
+  "homepage": "https://github.com/black-pony/angular-day04-05#readme"
+}
